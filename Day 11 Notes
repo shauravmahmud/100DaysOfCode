@@ -1,0 +1,48 @@
+############### Our Blackjack House Rules #####################
+import random
+
+def deal_card():
+  cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10] #Deck
+  card = random.choice(cards) #random
+  return card
+
+def calculate_score(cards):
+  if sum(cards) == 21 and len(cards) == 2:
+    return 0 #Blackjack zero means game ends
+  if 11 in cards and sum(cards) > 21:
+    cards.remove(11) #Change the 11 to a 1
+    cards.append(1)
+  return sum(cards)
+
+user_cards = []
+computer_cards = []
+is_game_over = False
+
+for _ in range(2):
+    user_cards.append(deal_card())
+    computer_cards.append(deal_card())
+
+print(user_cards)
+print(computer_cards)
+
+user_score = calculate_score(user_cards)
+computer_score = calculate_score(computer_cards)
+
+print(user_score)
+print(computer_score)
+
+#Reveal First card
+print(f' computers first card is {computer_cards[0]} ')
+
+if user_score == 0 or computer_score == 0 or user_score > 21:
+    is_game_over == True
+else:
+    deal_again = input("Do you want another card? Y/N")
+    if deal_again == 'Y':
+        user_cards.append(deal_card())
+    else: 
+        is_game_over = True
+
+print(user_score)
+print(computer_score)
+
