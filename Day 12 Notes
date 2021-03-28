@@ -1,0 +1,84 @@
+################### Scope ####################
+
+enemies = 1
+
+def increase_enemies():
+  enemies = 2
+  print(f"enemies inside function: {enemies}")
+
+increase_enemies()
+print(f"enemies outside function: {enemies}")
+
+#Local Scope
+def drink_potion():
+    potion_strength = 2
+    print(potion_strength)
+
+drink_potion()
+#Can't print outside the function, as it is only accessible within the function. Local Scope!
+
+#Global_scope
+player_health = 10 #Global 
+
+def drink_potion():
+    potion_strength = 2 #Local Scope
+    print(potion_strength)
+    print(player_health)
+
+drink_potion()
+
+#functions
+#Global_scope
+player_health = 10 #Global 
+
+def game():
+    def drink_potion():
+        potion_strength = 2 #Local Scope
+        print(potion_strength)
+        print(player_health)
+
+    drink_potion()
+print(player_health)
+
+#Does python have block scope?
+
+game_level = 3
+enemies = ["Skeleton" , "Zombie" , "Alien"]
+
+if game_level < 5:
+    new_enemy = enemies[0]
+
+print(new_enemy)
+
+#new
+
+game_level = 3
+
+def create_enemy():
+    enemies = ["Skeleton" , "Zombie" , "Alien"]
+    if game_level < 5:
+        new_enemy = enemies[0]
+
+    print(new_enemy)
+
+#Dont call your local and global variables the same name! (Generally)
+
+
+#How to modify global variables
+
+enemies = 1
+
+def increase_enemies():
+    global enemies
+    return enemies + 1
+
+increase_enemies()
+print(f"enemies outside function {enemies}")
+
+#Pthon constants and Global Scope
+
+PI = 3.14 #constants use upper case for naming conventions
+
+TWITTER_HANDLE = "@_CJMAYES"
+
+#In Python there is no block scope. Inside a if/else/for/while code block is the same as outside it.
