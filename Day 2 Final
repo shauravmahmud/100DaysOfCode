@@ -1,0 +1,19 @@
+#If the bill was $150.00, split between 5 people, with 12% tip. 
+print("Welcome to the Tip Generator\n")
+
+bill = float(input("What was your bill amount?\n"))
+
+individuals = int(input("How many individuals were at dinner?"))
+
+tip = float(input("What tip % would you like to give? 10, 12 or 15 ?\n")) / 100 + 1 
+
+#Each person should pay (150.00 / 5) * 1.12 = 33.6
+
+bill_pp = (bill / individuals) * tip 
+#Format the result to 2 decimal places = 33.60
+
+bill_rounded = round((bill_pp),2) #nope, update
+bill_rounded = "{:.2f}".format(bill_pp)
+
+print(f"Each person should pay ${bill_rounded}")
+
