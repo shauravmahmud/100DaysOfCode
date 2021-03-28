@@ -1,0 +1,239 @@
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm?"))
+
+if height >= 120:
+  print("You can ride the rollercoaster!")
+else: 
+  print("Sorry, you are not tall enough for the ride")
+
+  # if height == 120 
+  # When we have two equal signs it is checking the value on the left is equal to the value on the right, when it is just one equals sign it is assigning the left to the right
+
+
+  # 🚨 Don't change the code below 👇
+number = int(input("Which number do you want to check? "))
+# 🚨 Don't change the code above 👆
+if number % 2 == 0: 
+  print("This number is even!")
+else:
+  print("This number has a remainder so is odd!")
+#Write your code below this line 👇
+
+
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm?"))
+
+if height >=120:
+  print("You can ride the rollercoaster!")
+  age = int(input("What is your age?"))
+  if age <= 18:
+    print("Please pay $7")
+  else:
+    print("Please pay $12")
+else: 
+  print("You can not ride the rollercoaster!")
+
+
+if height >=120:
+  print("You can ride the rollercoaster!")
+  age = int(input("What is your age?"))
+  if age <= 12:
+    print(" five Dollars")
+  elif age<=18:
+    print(" 7 Dollars")
+  else:
+    print(" 12 Dollars")
+
+# 🚨 Don't change the code below 👇
+height = float(input("enter your height in m: "))
+weight = float(input("enter your weight in kg: "))
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+#It should tell them the interpretation of their BMI based on the BMI value.
+
+#Under 18.5 they are underweight
+#Over 18.5 but below 25 they have a normal weight
+#Over 25 but below 30 they are slightly overweight
+#Over 30 but below 35 they are obese
+#Above 35 they are clinically obese.
+
+BMI = weight /  ( height * height )
+
+if BMI < 18.5:
+  print("You are underweight")
+elif BMI < 25 and BMI > 18.5:
+    print("You are normal weight")
+elif BMI > 25 and BMI < 35:
+    print("You are slightly overweight")
+elif BMI > 30 and BMI < 35:
+    print("You are obese")
+elif BMI > 35:
+    print("You are clinically obese")
+    #Incorrect as i would also need to use equal signs in this code, and need to remember order of functions
+
+#Alternative solution
+bmi = round(weight / height ** 2)
+if bmi < 18.5:
+  print(f"Your bmi is {bmi}, you are underweight.")
+elif bmi < 25:
+  print(f"Your bmi is {bmi}, you have a normal weight") #Do not to check because the order of functions - only if its false it checks the next one
+elif bmi < 35:
+  print(f"Your bmi is {bmi}, you are obese")
+else:
+  print(f"Your bmi {bmi}, you are clinically obese")
+#This also uses the power and f-string code.
+
+
+# 🚨 Don't change the code below 👇
+year = int(input("Which year do you want to check? "))
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+#on every year that is evenly divisible by 4 **except** every year that is evenly divisible by 100 **unless** the year is also evenly divisible by 400
+
+if year % 4 == 0:
+  if year % 100 == 0:
+    if  year % 400 == 0:
+      print("Leap year")
+    else: 
+      print("Not leap year")
+  else: 
+    "print(Leap year)"
+else:
+    print("Not a leap year")
+
+
+height = int(input("What is your height?"))
+
+if height >=120:
+  print("You can ride the rollercoaster!")
+  age = int(input("What is your age?"))
+  if age <= 12:
+    bill = 5
+    print(" five Dollars")
+  elif age<=18:
+    bill = 7
+    print(" 7 Dollars")
+  else:
+    bill = 12
+    print(" 12 Dollars")
+
+  wants_photo = (input("Do you want photos? Y/N "))
+  if wants_photo == "Y" :
+    bill += 3  # you can also write 
+  
+  print(f"Your final bill is {bill}")
+
+else: print("Sorry, you have to grow taller before you can ride")
+
+# 🚨 Don't change the code below 👇
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+if size == "S":
+  price = 15
+
+  if add_pepperoni == "Y":
+    price += 2
+
+elif size == "M":
+  price = 20
+elif size == "L":
+  price = 25
+
+  if add_pepperoni == "Y":
+    price += 3
+
+if extra_cheese == "Y":
+  price += 1 
+
+print(f"Your final pizza price is ${price}")
+
+#Their solution
+bill = 0
+
+if size == "S":
+  bill += 15 
+elif size == "M":
+  bill += 20
+else:
+  bill += 25
+
+if add_pepperoni == "Y" :
+  if size == "S":
+    bill += 2
+  else:
+    bill += 3
+  
+if extra_cheese == "Y":
+  bill+= 1
+
+print(bill)
+
+height = 140 #skip 
+
+if height >=120:
+  print("You can ride the rollercoaster!")
+  age = int(input("What is your age?"))
+  if age <= 12:
+    bill = 5
+    print(" five Dollars")
+  elif age<=18:
+    bill = 7
+    print(" 7 Dollars")
+
+  elif age >= 45 and age <= 55:
+    print("Have a free ride! - midlife crisis")
+
+  else:
+    bill = 12
+    print(" 12 Dollars")
+
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+string_2 = name1 + name2
+print(string_2)
+lower_case_string = string_2.lower()
+
+t = lower_case_string.count("t")
+r = lower_case_string.count("r")
+u = lower_case_string.count("u")
+e = lower_case_string.count("e")
+
+true = t+r+u+e
+
+l = lower_case_string.count("l")
+o = lower_case_string.count("o")
+v = lower_case_string.count("v")
+e = lower_case_string.count("e")
+
+love = l+o+v+e
+
+love_score = str(true) + str(love) 
+print(love_score)
+
+score = int(love_score)
+
+if score < 10 or score > 90:
+  print(f"Your score is {score}, you go together like coke and mentos")
+elif score > 40 and score < 50:
+  print(f"Your score is {score} , you are alright together")
+else:
+  print(f"Your score is {score}")
+
+
+
+
