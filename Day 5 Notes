@@ -1,0 +1,130 @@
+#For Loop with Lists
+fruits = ["Apple", "Peach", "Pear"]
+for fruit in fruits:
+  print(fruit)
+  #Assigns variable name of fruit to each value. It then prints the fruit variable, looping forwards through each open
+
+  fruits = ["Apple", "Peach", "Pear"]
+
+for a in fruits:
+  print(a)
+print(fruits)
+#Indentation matters
+
+# 🚨 Don't change the code below 👇
+student_heights = input("Input a list of student heights ").split()
+for n in range(0, len(student_heights)):
+  student_heights[n] = int(student_heights[n])
+# 🚨 Don't change the code above 👆
+
+#Write your code below this row 👇
+#156 178 165 171 187
+print(student_heights)
+
+student_ct = len(student_heights)
+height_total = sum(student_heights)
+
+answer = height_total / student_ct
+print(answer)
+
+#Use a for loop to add them together
+
+print("Actual solution below")
+total_height = 0
+for height in student_heights:
+  total_height = total_height + height
+print(total_height)
+
+people = 0
+for student in student_heights:
+  people = people + 1
+print(people)
+
+#Whatever we call the items in the loop it doesn't matter as long as we are consistent in the forloop.
+
+# 🚨 Don't change the code below 👇
+student_scores = input("Input a list of student scores ").split()
+for n in range(0, len(student_scores)):
+  student_scores[n] = int(student_scores[n])
+print(student_scores)
+# 🚨 Don't change the code above 👆
+
+print(max(student_scores))
+print(min(student_scores))
+#Write your code below this row 👇
+#78 65 89 86 55 91 64 89
+
+highest_score = 0
+for n in student_scores:
+    if n > highest_score:
+      highest_score = n
+print(f"The highest score in the class is {highest_score}")
+
+for number in range (1,11,2):
+  print(number) #For 10 numbers you need the range to reach 11.
+#You can also specify the step size
+
+total = 0
+for number in range(1,101):
+  total = total + number
+print(total)
+
+total_even = 0
+for n in range(0,101,2):
+  total_even = total_even + n
+print(total_even)
+
+total2 = 0
+for number in range(1,101):
+  if number % 2 == 0:
+    total2 += number
+
+print(total2)
+
+#Fizz Buzz!
+
+  # If number is div by 3 then Fizz
+  # If the number is div by 5 then Buzz
+  # If the number div by 3 and 5 
+
+for number in range (1,100,1):
+  if number % 3 == 0 and number % 5 == 0:
+    print("Fizz Buzz")
+  elif number % 3 == 0:
+    print("Fizz")
+  elif number % 5 == 0:
+    print("Buzz")
+  else:
+    print(number)
+
+#Eazy Level - Order not randomised:
+#e.g. 4 letter, 2 symbol, 2 number = JduE&!91
+password = ""
+
+for char in range(1, nr_letters +1):
+  character_rand = random.choice(letters)
+  password = password + character_rand
+
+for sym in range(1, nr_symbols + 1):
+  symbol_rand = random.choice(symbols)
+  password = password + symbol_rand 
+
+for num in range(1, nr_numbers + 1):
+  number_rand = random.choice(numbers)
+  password = password + number_rand
+
+print(f"Unshuffled password as {password}")
+
+#Intermediary 
+#Method shown to reduce code
+password_int = ""
+for char in range(1, nr_letters +1):
+  password_int = random.choice(letters)
+
+for sym in range(1, nr_symbols + 1):
+  password_int = random.choice(symbols)
+
+for num in range(1, nr_numbers + 1):
+  password_int = random.choice(numbers)
+
+print(f"Unshuffled password as {password}")
