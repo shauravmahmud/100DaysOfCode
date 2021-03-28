@@ -1,0 +1,198 @@
+#def my_function():
+    #Do this
+    #Then do this
+    #Finally do this 
+#my_function
+
+# Review: 
+# Create a function called greet(). 
+def greet():
+    print("hello")
+    print("Line 2")
+    print("Third statement")
+greet()
+# Write 3 print statements inside the function.
+# Call the greet() function and run your code.
+
+def greet(something):
+    print(something)
+    print(f"hello {something}")
+    print(f"{something} is cool")
+
+greet("CJ Mayes")
+
+#argument is waht is passed Over = actual value (CJ)
+#The parameter is the thing in the function the name = something 
+
+#Functions with more than 1 input
+def greet_with(name, location):
+    print(f"Hello {name}, are you from {location}?")
+
+greet_with("CJ" , "Chelmsford") #Positional arguements!
+
+#Keyword arguements
+#my_function(a=1 , b=2 , c=3)
+
+def greet_with_new(name, location):
+    print(f"Hello {name}, are you from {location}?")
+
+greet_with_new( location = "Chelmsford" , name = "CJ") #Positional arguements!
+
+#Write your code below this line 👇
+# 1 can covers 5 metres
+# Given a random height and width how many cans do you need
+import math
+
+def paint_calc(height, width, cover):
+    paint =(height * width / cover)
+    paint_total = math.ceil(paint)
+    print(f"You will need {paint_total} cans of paint")
+
+
+#Write your code above this line 👆
+# Define a function called paint_calc() so that the code below works.   
+
+# 🚨 Don't change the code below 👇
+test_h = int(input("Height of wall: "))
+test_w = int(input("Width of wall: "))
+coverage = 5
+paint_calc(height=test_h, width=test_w, cover=coverage)
+
+#Prime Number Checker
+# Only divisible by 1 and itself
+
+#Write your code below this line 👇
+def prime_checker(number):
+    is_prime = True
+    for i in range (2, number):
+        if number % i == 0:
+            is_prime = False
+    if is_prime: #If True
+        print("It's a prime number")
+    else:
+        print("it's not a prime")
+
+#Write your code above this line 👆
+    
+#Do NOT change any of the code below👇
+n = int(input("Check this number: "))
+prime_checker(number=n)
+
+#---------------------
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+#TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
+
+def encrypt (plain_text , shift_amount):
+    cipher_text = ""
+    #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
+    #e.g. 
+    for letter in (plain_text):
+        position = alphabet.index(letter)
+        new_position = position + shift_amount
+        new_letter = alphabet[new_position]
+        cipher_text = cipher_text + new_letter
+
+    print(f"The encoded message is {cipher_text}")
+    #plain_text = "hello"
+    #shift = 5
+    #cipher_text = "mjqqt"
+    #print output: "The encoded text is mjqqt"
+
+    ##HINT: How do you get the index of an item in a list:
+    #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
+
+#TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
+encrypt(plain_text = text, shift_amount = shift)
+
+#-------------------------
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+#TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
+
+def encrypt (plain_text , shift_amount):
+    cipher_text = ""
+    #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
+    #e.g. 
+    for letter in (plain_text):
+        position = alphabet.index(letter)
+        new_position = position + shift_amount
+        new_letter = alphabet[new_position]
+        cipher_text = cipher_text + new_letter
+
+    print(f"The encoded message is {cipher_text}")
+    #plain_text = "hello"
+    #shift = 5
+    #cipher_text = "mjqqt"
+    #print output: "The encoded text is mjqqt"
+
+    ##HINT: How do you get the index of an item in a list:
+    #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
+
+#TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
+encrypt(plain_text = text, shift_amount = shift)
+
+
+#--------------------
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+def encrypt (plain_text , shift_amount):
+    cipher_text = ""
+    for letter in (plain_text):
+        position = alphabet.index(letter)
+        new_position = position + shift_amount
+        new_letter = alphabet[new_position]
+        cipher_text = cipher_text + new_letter
+    print(f"The encoded message is {cipher_text}")
+
+def decrypt (cipher_text , shift_amount):
+  plain_text = ""
+  for letter in cipher_text:
+    position = alphabet.index(letter)
+    new_position = position - shift_amount
+    plain_text += alphabet[new_position]
+  print(f"The decoded text is {plain_text}")
+
+if direction == "encode":
+  encrypt(plain_text=text, shift_amount=shift)
+elif direction == "decode":
+  decrypt(cipher_text=text, shift_amount=shift)
+    
+#-------------------------------------------
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+#Combine the encrypt() and decrypt() functions into a single function called caesar(). 
+
+def caesar(start_text, shift_amount, cipher_direction):
+  end_text = "" #starts empty finishes with either encoded or decoded text
+  if cipher_direction == "decode": #has to be outside the for loop
+      shift_amount = shift_amount * -1 #forward / bw
+  for letter in start_text: 
+    position = alphabet.index(letter)
+    new_position = position + shift_amount
+    end_text = end_text + alphabet[new_position]
+  print(f"Here's the {direction}d result: {end_text}")
+
+caesar(start_text=text, shift_amount=shift, cipher_direction=direction) #calls the function
+
+
