@@ -1,0 +1,155 @@
+#Random Module
+import random 
+
+random_integer = random.randint(1,10)
+
+#Random Module
+import random
+
+random_integer = random.randint(1, 10)
+print(random_integer)
+
+#import my_module #You can refer to other modules and python scripts.
+
+#print(my_module.pi) #If i had pi = 2.14 in another module
+
+random_float= random.random() 
+print(random_float) #Random float between 0 and 1
+
+#0.0000000 - 0.99999999
+
+rf_2 = random_float * 5
+print(rf_2)
+
+#0.000000 - 4.99999999
+
+love_score = random.randint(1,100)
+print(f"Your love score is {love_score}")
+
+import random
+random_integer = random.randint(0,1)
+print(random_integer)
+print(type(random_integer))
+
+if random_integer == 1:
+  print("Heads")
+else:
+    print("Tails")
+
+# Lists can be mixed data types
+# Lists ALWAYS have square brackets!!
+
+fruits = ["cherry", "apple" , "pear"]
+
+states_of_america = ["Deleware" , "Pennsylvania" , "habdahj", " ajsdnkasj"]
+
+#Different states in the US joined at different times.
+#The order of the data then becomes important!
+
+states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecticut", "Massachusetts", "Maryland", "South Carolina", "New Hampshire", "Virginia", "New York", "North Carolina", "Rhode Island", "Vermont", "Kentucky", "Tennessee", "Ohio", "Louisiana", "Indiana", "Mississippi", "Illinois", "Alabama", "Maine", "Missouri", "Arkansas", "Michigan", "Florida", "Texas", "Iowa", "Wisconsin", "California", "Minnesota", "Oregon", "Kansas", "West Virginia", "Nevada", "Nebraska", "Colorado", "North Dakota", "South Dakota", "Montana", "Washington", "Idaho", "Wyoming", "Utah", "Oklahoma", "New Mexico", "Arizona", "Alaska", "Hawaii"]
+
+print(states_of_america)
+print(states_of_america[0])
+print(states_of_america[2])
+print(states_of_america[-1])
+
+state_new = states_of_america[-1]
+print(state_new)
+
+states_of_america[1] = "PENCILVAYNIAAAA"
+print(states_of_america)
+#Here you can alter lists pretty easily
+
+print(states_of_america)
+
+states_of_america.append("New state")
+print(states_of_america)
+
+states_of_america.extend(["New 1" , "New 2"])
+print(states_of_america)
+
+#Banker Roulette 
+#Who will pay the bill?
+
+# Split string method
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+# 🚨 Don't change the code above 👆
+print(names)
+#Write your code below this line 👇
+import random
+list_len = len(names)-1 #Remember they start at 0
+random_index = random.randint(0,list_len)
+
+print(random_index)
+print(names[random_index])
+
+#Banker Roulette 
+#Who will pay the bill?
+
+# Split string method
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+# 🚨 Don't change the code above 👆
+print(names)
+#Write your code below this line 👇
+import random
+list_len = len(names)-1 #Remember they start at 0
+random_index = random.randint(0,list_len)
+
+print(random_index)
+payee = (names[random_index])
+
+print( payee + " is going to pay the meal today")
+
+#Banker Roulette 
+#Who will pay the bill?
+
+# Split string method
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+# 🚨 Don't change the code above 👆
+#Write your code below this line 👇
+import random
+person_who_will_pay = random.choice(names)
+print(person_who_will_pay)
+
+states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecticut", "Massachusetts", "Maryland", "South Carolina", "New Hampshire", "Virginia", "New York", "North Carolina", "Rhode Island", "Vermont", "Kentucky", "Tennessee", "Ohio", "Louisiana", "Indiana", "Mississippi", "Illinois", "Alabama", "Maine", "Missouri", "Arkansas", "Michigan", "Florida", "Texas", "Iowa", "Wisconsin", "California", "Minnesota", "Oregon", "Kansas", "West Virginia", "Nevada", "Nebraska", "Colorado", "North Dakota", "South Dakota", "Montana", "Washington", "Idaho", "Wyoming", "Utah", "Oklahoma", "New Mexico", "Arizona", "Alaska", "Hawaii"]
+
+a= len(states_of_america)
+print(states_of_america[50-1])
+print(states_of_america[a-1])
+
+
+#dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears", "Tomatoes", "Celery", "Potatoes"]
+
+#print(dirty_dozen)
+
+#Nested lists
+fruits = ["Strawberries","Nectarines", "Apples","Grapes", "Peaches","Cherries", "Pears"]
+vegetables = ["Spinach","Kale", "Tomato"]
+
+dirty_dozen = [fruits, vegetables]
+print(dirty_dozen)
+
+# 🚨 Don't change the code below 👇
+row1 = ["⬜a","⬜️","⬜️"]
+row2 = ["⬜️","⬜️","⬜️"]
+row3 = ["⬜️","⬜️","⬜️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this row 👇
+horizontal = int(position[0]) #the first value is X
+vertical = int(position[1]) #the second value is Y
+
+selected_row = map[vertical-1] #need to minus 1 this finds which row we are going to update
+selected_row[horizontal-1] = "X" 
+#This then will look to find what within that which column along we update!
+
+#Write your code above this row 👆
+
+# 🚨 Don't change the code below 👇
+print(f"{row1}\n{row2}\n{row3}")
