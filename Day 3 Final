@@ -1,0 +1,20 @@
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+
+left_right = input("Would you like to go left or right? L / R\n")
+
+if left_right == "L":
+    swim_wait = input("Would you like to swim or wait? S or W\n")
+    if swim_wait == "W":
+      door = input("Which door? Red or Blue or Yellow?\n")
+      if door == "Red":
+        print("Burned by fire, Game Over")
+      elif door == "Blue":
+        print("Eaten by beasts, Game Over")
+      elif door == "Yellow":
+        print("You Win!")
+    else:
+      print("Game Over")
+
+else:
+    print("You have fallen in a hole, Game Over\n")
