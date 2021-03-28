@@ -1,0 +1,59 @@
+#Functions
+print("Hello")
+num_char = len("Hello")
+print(len("Hello"))
+print(num_char)
+
+def my_function():
+  print("Hello")
+  print("Bye")
+
+my_function() #Have to call the function
+
+def my_function():
+  print("Ignore")
+  #Do This
+  #Then do this
+  #Finally do this
+
+my_function() #Calls the function
+
+
+def turn_right():
+  turn_left()
+  turn_left()
+  turn_left()
+
+def jump():
+  move()
+  turn_left()
+  move() 
+  turn_right()
+  move()
+  turn_right()
+  move()
+  turn_left()
+
+for step in range(6):
+    jump()
+
+# How to change code to have a while statement
+number_of_hurdles = 6
+
+while number_of_hurdles > 0:
+    jump()
+    number_of_hurdles = number_of_hurdles - 1 
+    print(number_of_hurdles)
+
+while at_goal != True:
+    jump()
+
+#You can also so
+while not at_goal():
+    jump()
+
+while not_at_goal():
+    if front_wall():
+        jump()
+    else:
+        move()
